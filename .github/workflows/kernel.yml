@@ -27,7 +27,7 @@ jobs:
     - name: Add KernelSU
       run: |
         git clone https://github.com/tiann/KernelSU
-        ln -sf KernelSU/kernel kernel/msm-5.4/drivers/kernelsu
+        ln -sf "$(pwd)/KernelSU/kernel" kernel/msm-5.4/drivers/kernelsu
         echo "obj-y += kernelsu/" >> kernel/msm-5.4/drivers/Makefile
     - name: Clang Build
       run: |
@@ -59,7 +59,7 @@ jobs:
     - name: Add KernelSU
       run: |
         git clone https://github.com/tiann/KernelSU
-        ln -sf KernelSU/kernel kernel/msm-5.4/drivers/kernelsu
+        ln -sf "$(pwd)/KernelSU/kernel" kernel/msm-5.4/drivers/kernelsu
         echo "obj-y += kernelsu/" >> kernel/msm-5.4/drivers/Makefile
     - name: GCC Build
       run: |
@@ -91,7 +91,7 @@ jobs:
     - name: Add KernelSU
       run: |
         git clone https://github.com/tiann/KernelSU
-        ln -sf KernelSU/kernel kernel/msm-5.4/drivers/kernelsu
+        ln -sf "$(pwd)/KernelSU/kernel" kernel/msm-5.4/drivers/kernelsu
         echo "obj-y += kernelsu/" >> kernel/msm-5.4/drivers/Makefile
     - name: Sync Clang
       run: |
@@ -130,7 +130,7 @@ jobs:
     - name: Add KernelSU
       run: |
         git clone https://github.com/tiann/KernelSU
-        ln -sf KernelSU/kernel kernel/msm-5.4/drivers/kernelsu
+        ln -sf "$(pwd)/KernelSU/kernel" kernel/msm-5.4/drivers/kernelsu
         echo "obj-y += kernelsu/" >> kernel/msm-5.4/drivers/Makefile
     - name: GCC Build
       run: |
